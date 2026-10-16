@@ -1,11 +1,11 @@
 (function (w, d) {
   'use strict';
 
-  var BASE = 'https://skylineip.s3.sa-east-1.amazonaws.com/Tour+Virtual/saraiva-rezende/trend/ferramentas/';
+  var BASE = 'https://skylineip.s3.sa-east-1.amazonaws.com/Tour+Virtual/saraiva-rezende/torres/ferramentas/';
   var GALLERY_URL       = BASE + 'index.html';
   var VIDEO_GALLERY_URL = BASE + 'video-gallery.html';
 
-  var BG = '#45923A';   // verde do empreendimento — aparece enquanto o iframe carrega
+  var BG = '#542E1E';   // marrom do empreendimento — aparece enquanto o iframe carrega
 
   var overlay    = null;
   var msgHandler = null;

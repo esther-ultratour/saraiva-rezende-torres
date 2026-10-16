@@ -1,5 +1,5 @@
 <#
-  deploy.ps1 — Deploy da galeria Trend (Saraiva de Rezende) para o AWS S3.
+  deploy.ps1 — Deploy da galeria Jose Torres Sobrinho (Saraiva de Rezende) para o AWS S3.
 
   Uso:
     ./deploy.ps1             # sync completo + cache-control no HTML/JS
@@ -17,7 +17,7 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
-$Bucket = 's3://skylineip/Tour Virtual/saraiva-rezende/trend/ferramentas'
+$Bucket = 's3://skylineip/Tour Virtual/saraiva-rezende/torres/ferramentas'
 $NoCache = 'no-cache,no-store,must-revalidate'
 
 Set-Location -Path $PSScriptRoot
@@ -56,7 +56,7 @@ else {
   aws s3 sync . "$Bucket/" `
     --exclude "*" `
     --include "index.html" --include "video-gallery.html" --include "inject.js" `
-    --include "assets/brand/*" --include "assets/fachada/*" --include "assets/areas-comuns/*" `
+    --include "assets/brand/*" --include "assets/fachada/*" --include "assets/areas-comuns/*" --include "assets/apartamento/*" `
     --include "assets/plantas/*" --include "assets/miniaturas/*" --include "assets/video/*" `
     --exclude "*Thumbs.db" `
     @videoExclude `
@@ -70,4 +70,4 @@ else {
 }
 
 Write-Host 'Deploy concluido.' -ForegroundColor Green
-Write-Host "Base: https://skylineip.s3.sa-east-1.amazonaws.com/Tour+Virtual/saraiva-rezende/trend/ferramentas/" -ForegroundColor DarkGray
+Write-Host "Base: https://skylineip.s3.sa-east-1.amazonaws.com/Tour+Virtual/saraiva-rezende/torres/ferramentas/" -ForegroundColor DarkGray
